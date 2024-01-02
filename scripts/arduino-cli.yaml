@@ -12,7 +12,7 @@ directories:
   # user: /home/xxx/Arduino
   builtin.libraries : ./src/
 library:
-  enable_unsafe_install: false
+  enable_unsafe_install: true
 logging:
   file: ""
   format: text
