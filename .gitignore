@@ -1,0 +1,7 @@
+**/autosave/
+**/backup/
+**/build/**/*.bin
+**/build/**/*.elf
+**/build/**/*.map
+**/build/**/*.u2f
+**/*.bak

@@ -1,0 +1,11 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  Lint:
+    uses: ./.github/workflows/lint.yml
+
+  Check-Style:
+    uses: ./.github/workflows/check-style.yml
+
+  Build:
+    uses: ./.github/workflows/build.yml

@@ -1,0 +1,12 @@
+name: Lint
+on: [workflow_call]
+jobs:
+  Compute:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: arduino/arduino-lint-action@v1
+        with:
+          library-manager: update
+          compliance: strict
+          path: ./src/Waveshare-RP2040-Touch-LCD-1.28/ui/
