@@ -1,3 +1,5 @@
+[![CI](https://github.com/ozanges/Waveshare-RP2040-Touch-LCD-1.28/actions/workflows/pipeline.yml/badge.svg?branch=master)](https://github.com/ozanges/Waveshare-RP2040-Touch-LCD-1.28/actions/workflows/pipeline.yml)
+
 ## Versions
 - SquareLine Studio 1.3.4 / LVGL
 - Arduino IDE 2.2.1 
