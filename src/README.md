@@ -1,3 +1,5 @@
+![workflow status](https://github.com/ozanges/Waveshare-RP2040-Touch-LCD-1.28/actions/workflows/pipeline.yml/badge.svg)
+
 # Arduino project for SquareLine Studio with TFT_eSPI
 
 ## Get started

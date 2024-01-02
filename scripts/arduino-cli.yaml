@@ -10,7 +10,7 @@ directories:
   # data: /home/xxx/.arduino15
   # downloads: /home/xxx/.arduino15/staging
   # user: /home/xxx/Arduino
-  builtin.libraries : ./src/
+  builtin.libraries : ./src/libraries/
 library:
   enable_unsafe_install: false
 logging:
