@@ -1,0 +1,32 @@
+name: Build
+on: [workflow_call]
+jobs:
+  Compute:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Arduino CLI
+        uses: arduino/setup-arduino-cli@v1
+
+      # - name: Install platform
+      #   run: |
+      #     arduino-cli core update-index
+      #     arduino-cli core install rp2040:rp2040 --additional-urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+
+      # - name: Compile Sketch
+      #   run: arduino-cli compile --config-file ./scripts/arduino-cli.yaml --fqbn rp2040:rp2040:waveshare_rp2040_lcd_1_28 ./src/ui/ui.ino
+
+      
+      - name: Compile Sketch
+        uses: arduino/compile-sketches@v1
+        with:
+          enable-deltas-report: true
+          platforms: |
+            - name: "rp2040:rp2040"
+            - source-url: "https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json"
+          fqbn: "rp2040:rp2040:waveshare_rp2040_lcd_1_28"
+          libraries: |
+            - source-path: "./src/libraries/"
+        

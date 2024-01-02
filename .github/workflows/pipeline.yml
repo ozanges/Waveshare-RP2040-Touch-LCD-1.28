@@ -8,4 +8,4 @@ jobs:
     uses: ./.github/workflows/check-style.yml
 
   Build:
-    uses: ./.github/workflows/build.yml
+    uses: ./.github/workflows/build-sketch.yml
