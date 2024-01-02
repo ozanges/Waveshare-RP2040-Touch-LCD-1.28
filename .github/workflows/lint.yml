@@ -9,4 +9,4 @@ jobs:
         with:
           library-manager: update
           compliance: strict
-          path: ./src/Waveshare-RP2040-Touch-LCD-1.28/ui/
+          path: ./src/ui/

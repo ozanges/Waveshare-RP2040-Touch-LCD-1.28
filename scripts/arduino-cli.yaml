@@ -10,7 +10,7 @@ directories:
   # data: /home/xxx/.arduino15
   # downloads: /home/xxx/.arduino15/staging
   # user: /home/xxx/Arduino
-  builtin.libraries : ./src/Waveshare-RP2040-Touch-LCD-1.28/libraries/
+  builtin.libraries : ./src/
 library:
   enable_unsafe_install: false
 logging:
