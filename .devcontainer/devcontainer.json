@@ -1,0 +1,15 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "GitHub.vscode-github-actions",
+                "eamodio.gitlens",
+                "PKief.material-icon-theme"
+            ]
+        }
+    }
+    // ,"forwardPorts": [3000]
+}
