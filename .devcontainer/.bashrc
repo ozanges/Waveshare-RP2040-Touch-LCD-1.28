@@ -17,11 +17,11 @@
 # alias cp='cp -i'
 # alias mv='mv -i'
 
-echo -e "\033[31m**************************************\033[0m"
-echo -e "\033[31m*\033[0m"
-echo -e "\033[31m*\033[0m \033[31mWARNING\033[0m : need to fix Dockerfile arduino-cli install command !"
-echo -e "\033[31m*\033[0m Actually \033[31mfixed\033[0m to version 0.35.0"
-echo -e "\033[31m*\033[0m See https://github.com/arduino/arduino-cli/issues/2483 \033[31mif a fix exists\033[0m"
-echo -e "\033[31m*\033[0m See https://arduino.github.io/arduino-cli/0.28/installation/ for installation details"
-echo -e "\033[31m*\033[0m"
-echo -e "\033[31m**************************************\033[0m"
+# echo -e "\033[31m**************************************\033[0m"
+# echo -e "\033[31m*\033[0m"
+# echo -e "\033[31m*\033[0m \033[31mWARNING\033[0m : need to fix Dockerfile arduino-cli install command !"
+# echo -e "\033[31m*\033[0m Actually \033[31mfixed\033[0m to version 0.35.0"
+# echo -e "\033[31m*\033[0m See https://github.com/arduino/arduino-cli/issues/2483 \033[31mif a fix exists\033[0m"
+# echo -e "\033[31m*\033[0m See https://arduino.github.io/arduino-cli/0.28/installation/ for installation details"
+# echo -e "\033[31m*\033[0m"
+# echo -e "\033[31m**************************************\033[0m"
