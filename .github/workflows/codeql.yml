@@ -11,16 +11,6 @@
 #
 name: "CodeQL"
 on: [push, pull_request]
-# on:
-#   # push:
-#   #   branches: [ "main", "master" ]
-#   schedule:
-#     - cron: '0 0 * * *'
-#   pull_request:
-#     branches: '*'
-#   push:
-#     branches: '*'
-
 
 jobs:
   analyze:
@@ -30,8 +20,8 @@ jobs:
     #   - https://gh.io/supported-runners-and-hardware-resources
     #   - https://gh.io/using-larger-runners
     # Consider using larger runners for possible analysis time improvements.
-    runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-20.04' }}
-    timeout-minutes: ${{ (matrix.language == 'swift' && 120) || 360 }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
     permissions:
       actions: read
       contents: read
