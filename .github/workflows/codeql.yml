@@ -58,8 +58,8 @@ jobs:
 
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
-    - name: Autobuild
-      uses: github/codeql-action/autobuild@v2
+    #- name: Autobuild
+    #  uses: github/codeql-action/autobuild@v2
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 See https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
@@ -70,23 +70,24 @@ jobs:
     # - run: |
     #     ./.github/workflows/codeql-buildscript.sh
 
-    # - name: Setup Arduino CLI
-    #   uses: arduino/setup-arduino-cli@v1
+    - name: Setup Arduino CLI
+      uses: arduino/setup-arduino-cli@v1
 
-    # - name: Install platform
-    #   run: |
-    #     arduino-cli core update-index
-    #     arduino-cli core install rp2040:rp2040 --additional-urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
+    - name: Install platform
+      run: |
+        arduino-cli core update-index
+        arduino-cli core install rp2040:rp2040 --additional-urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
 
-    # - name: Compile Sketch
-    #   run: arduino-cli compile --config-file ./scripts/arduino-cli.yaml --fqbn rp2040:rp2040:waveshare_rp2040_lcd_1_28 ./src/ui/ui.ino
+    - name: Compile Sketch
+      run: arduino-cli compile --config-file ./scripts/arduino-cli.yaml --fqbn rp2040:rp2040:waveshare_rp2040_lcd_1_28 ./src/ui/ui.ino
 
-    # - name: Perform CodeQL Analysis
-    #   uses: github/codeql-action/analyze@v2
-    #   with:
-    #     category: "/language:${{matrix.language}}"
-    #     upload: false
-    #   id: step1
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+      with:
+        category: "/language:${{matrix.language}}"
+        upload: false
+        checkout_path: ./src/ui/ui.ino
+      id: step1
 
     # Filter out rules with low severity or high false positive rate
     # Also filter out warnings in third-party code
