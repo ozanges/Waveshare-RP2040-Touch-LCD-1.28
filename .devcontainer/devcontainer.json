@@ -1,0 +1,17 @@
+{
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "postCreateCommand": "chmod +x /workspaces/Waveshare-RP2040-Touch-LCD-1.28/build.bash; cp /workspaces/Waveshare-RP2040-Touch-LCD-1.28/scripts/arduino-cli.yaml /root/.arduino15/arduino-cli.yaml",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vsciot-vscode.vscode-arduino",
+                "GitHub.vscode-github-actions",
+                "eamodio.gitlens",
+                "PKief.material-icon-theme"
+            ]
+        }
+    }
+    // ,"forwardPorts": [3000]
+}
