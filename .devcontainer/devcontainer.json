@@ -14,4 +14,10 @@
         }
     }
     // ,"forwardPorts": [3000]
+    ,"mounts": [
+        // Need for usbip command
+        // See "/sys" container is readonly here : https://github.com/home-assistant/supervisor/issues/3861
+        // See https://stackoverflow.com/questions/42938992/usbip-in-docker
+        { "source": "/sys", "target": "/sys", "type": "bind" }
+    ]
 }
