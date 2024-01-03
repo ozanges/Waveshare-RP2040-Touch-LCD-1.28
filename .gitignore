@@ -3,5 +3,5 @@
 **/build/**/*.bin
 **/build/**/*.elf
 **/build/**/*.map
-**/build/**/*.u2f
+**/build/**/*.uf2
 **/*.bak
