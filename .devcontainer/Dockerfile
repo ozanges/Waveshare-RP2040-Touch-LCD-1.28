@@ -18,6 +18,10 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
     && usermod -s /bin/bash $USERNAME
 
+RUN mkdir /commandhistory \
+    && touch /commandhistory/.bash_history \
+    && chown -R $USERNAME /commandhistory 
+
 USER $USERNAME
 
 RUN cd /usr/local \
@@ -27,5 +31,3 @@ COPY .bashrc /home/$USERNAME/
 
 RUN arduino-cli core update-index \
     && arduino-cli core install rp2040:rp2040 --additional-urls https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json
-
-RUN echo "hello"
