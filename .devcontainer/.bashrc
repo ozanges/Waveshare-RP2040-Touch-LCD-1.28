@@ -112,6 +112,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export PROMPT_COMMAND='history -a' && export HISTFILE=/commandhistory/.bash_history
+
 # echo -e "\033[31m**************************************\033[0m"
 # echo -e "\033[31m*\033[0m"
 # echo -e "\033[31m*\033[0m \033[31mWARNING\033[0m : need to fix Dockerfile arduino-cli install command !"
